@@ -123,8 +123,14 @@ main {
 	border-radius: 8px;
 }
 
+.map{
+	border:8px solid #000;
+	width: 95%;
+	height: 50%;
+}
+
 /* Media Query for Tablet Viewport */
-@media screen and (min-width: 630px) {
+@media screen and (min-width: 630px), print {
 	
 	/* Tablet Viewport: Show tablet-desktop class, hide mobile class */
 	.tablet-desktop{
@@ -153,24 +159,118 @@ main {
 	nav li a {
 		padding: 01.em 0.75em;
 	}
-}
-/* END of Media Query for Tablet Viewport*/
-/*
-#excercises {
+	
+	/* Tablet Viewport: Style rules for main content area */
+	main ul {
+		margin: 0 0 4% 10%;
+	}
+	
+	#excercises {
 	clear: left;
 	border-top: 1px solid #000;
 	border-bottom: 1px solid #000;
-	background-color: #f2f2f2;
+	background: linear-gradient(to right, #ccc, #fff);
+/*	background-color: #f2f2f2;*/
 	padding: 1% 2%;
 }
 
-#excercises dt{
+	#excercises dt{
 	font-weight: bold;
 }
 
-excercises dd {
+	excercises dd {
 	padding: 0.5% 1% 2% 0;
-} */
+} 
+	.tel-num {
+		font-size: 1.25em;
+	}
+	
+	.map{
+		height: 600px;
+		width: 600px;
+	}
+	#contact {
+		text-align: center;
+	}
+}
+/* END of Media Query for Tablet Viewport*/
+
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1015px), print {
+	
+	/* Desktop Viewport: Style rule for header */
+	header {
+		width: 25%;
+		float: left;
+		padding-bottom: 0;
+	}
+	
+	/* Desktop Viewport: Style rules for navigation */
+	nav {
+		float: right;
+		width: 70%;
+		margin: 4em 1em 0 0;
+	}
+	
+	nav ul{
+		text-align: right;
+	}
+	
+	nav li{
+		border: none;
+	}
+	
+	nav li a {
+		padding: 0.5em 1em
+	}
+	
+	nav li a:hover {
+		color: #000;
+		background-color: #fff;
+	}
+	
+	/* Desktop Viewport: Style Rules for main content */
+	main{ 
+		clear: both;
+	}
+	
+	main h1{
+		font-size: 1.8em;
+	}
+	
+	#weights, #cardio, #training {
+		width: 29%;
+		float: left;
+		margin: 0 2%;
+	}
+	
+	#excercises {
+		clear: left;
+	}
+
+}/* Closing Desktop Viewport Media Query*/
+
+/* Large Screen Media Query */
+@media screen and (min-width: 1921px) {
+	
+	#container {
+		width: 1920px;
+		margin: 0 auto;
+	}
+	
+}/* End Large Screen Media Query */
+
+
+/* Media Query for Print */
+@media print {
+	
+	body{
+		background-color: #fff;
+		color: #000;
+	}
+	
+}
 
 .external-link {
 	color: #606;
@@ -181,12 +281,6 @@ excercises dd {
 #contact .contact-email-link {
 	color: #606;
 	text-decoration: none;
-}
-
-.map {
-	border: 8px solid #000;
-	width: 95%;
-	height: 50%
 }
 
 footer p {
